@@ -15,7 +15,14 @@ app.get('/', function(req,res){
 app.get('/home', function(req,res){
     res.render('pages/home');
 });
-
-connection.end()
+app.get('/students', function(req,res){
+    connection.query('SELECT * from students', function (err, rows, fields) {
+        if (err) throw err
+        res.render('pages/students',{students : rows})
+        console.log('The solution is: ', rows[0].students)
+      })
+      
+});
+//connection.end()
 console.log('App is runnins at http://localhost:3000');
 app.listen(3000);
