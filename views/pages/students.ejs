@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <% include ../partial/linkinhead %>
-    <title>Document</title>
+<% include ../partial/navbar %> 
+<title>Document</title>
 </head>
 <body>
-<% include ../partial/navbar %> 
+<div class="container">
 <table class="table">
 <thead>
     <tr>
@@ -28,5 +29,7 @@
     </tr>
     <% }); %>
 </tbody>
+<div class="container">
 </body>
+<% include ../partial/linkunderbody %> 
 </html>
