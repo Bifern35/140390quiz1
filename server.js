@@ -19,7 +19,15 @@ app.get('/students', function(req,res){
     connection.query('SELECT * from students', function (err, rows, fields) {
         if (err) throw err
         res.render('pages/students',{students : rows})
-        console.log('The solution is: ', rows[0].students)
+        console.log('The students is: ', rows[0].students)
+      })
+      
+});
+app.get('/subjects', function(req,res){
+    connection.query('SELECT * from subjects', function (err, rows, fields) {
+        if (err) throw err
+        res.render('pages/subjects',{subjects : rows})
+        console.log('The subjects is: ', rows[0].students)
       })
       
 });
